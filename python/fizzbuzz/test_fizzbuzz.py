@@ -17,6 +17,8 @@ def test_fizz():
   assert fb.fizz(1) == 1
   assert fb.fizz(5) == 5
   assert fb.fizz(37) == 37
+  assert fb.fizz("FizzBuzz") == "FizzBuzz"
+  assert fb.fizz("Buzz") == "Buzz"
 
 def test_buzz():
   assert fb.buzz(5) == "Buzz"
@@ -37,3 +39,12 @@ def test_fibu():
 def test_count():
   assert fb.count(5)  == [1, 2, 3, 4, 5]
   assert fb.count(10) == [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+def test_play():
+  assert fb.play(5)  == [ 1, 2, "Fizz", 4, "Buzz" ]
+  assert fb.play(20) == [
+    1, 2, "Fizz", 4, "Buzz",
+    "Fizz", 7, 8, "Fizz", "Buzz",
+    11, "Fizz", 13, 14, "FizzBuzz",
+    16, 17, "Fizz", 19, "Buzz"
+  ]
